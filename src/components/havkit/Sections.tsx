@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import heroImage from "@/assets/hero-placeholder.svg";
 import aboutImage from "@/assets/about-placeholder.svg";
@@ -460,7 +461,15 @@ export function Footer() {
         <span>
           © {year} HAVKIT. {t.footer.rights}
         </span>
-        <span>Kyiv · Ukraine</span>
+        <div className="flex items-center gap-4">
+          <Link to="/privacy" className="hover:text-primary">
+            {t.footer.privacy}
+          </Link>
+          <Link to="/terms" className="hover:text-primary">
+            {t.footer.terms}
+          </Link>
+          <span>Kyiv · Ukraine</span>
+        </div>
       </div>
     </footer>
   );

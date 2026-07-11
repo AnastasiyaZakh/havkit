@@ -90,11 +90,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         },
         { property: "og:site_name", content: "HAVKIT" },
         { property: "og:type", content: "website" },
+        { property: "og:image", content: "/og-image.png" },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: "/og-image.png" },
       ],
       links: [
         { rel: "stylesheet", href: appCss },
         { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+        {
+          rel: "icon",
+          href: "/favicon-32x32.png",
+          sizes: "32x32",
+          type: "image/png",
+        },
+        {
+          rel: "icon",
+          href: "/favicon-16x16.png",
+          sizes: "16x16",
+          type: "image/png",
+        },
+        { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",

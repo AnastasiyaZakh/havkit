@@ -64,6 +64,8 @@ export type Dict = {
     social: string;
     lang: string;
     rights: string;
+    privacy: string;
+    terms: string;
   };
 };
 
@@ -252,6 +254,8 @@ export const translations: Record<Lang, Dict> = {
       social: "Соцмережі",
       lang: "Мова",
       rights: "Усі права захищені.",
+      privacy: "Політика конфіденційності",
+      terms: "Умови надання послуг",
     },
   },
 
@@ -441,6 +445,8 @@ export const translations: Record<Lang, Dict> = {
       social: "Social",
       lang: "Language",
       rights: "All rights reserved.",
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
     },
   },
 };
