@@ -31,8 +31,8 @@ const content = {
       {
         heading: "1. Які дані ми збираємо",
         body: [
-          "Коли ви записуєтесь на консультацію (через Telegram, Calendly або іншим способом), ми можемо отримати ваше ім’я та номер телефону.",
-          "Ми не збираємо жодних інших персональних даних через цей сайт і не використовуємо форми на сайті для збору даних напряму — запис відбувається через сторонні сервіси (Telegram, Calendly).",
+          "Коли ви записуєтесь на консультацію (через Telegram, Google Calendar або іншим способом), ми можемо отримати ваше ім’я та номер телефону.",
+          "Ми не збираємо жодних інших персональних даних через цей сайт і не використовуємо форми на сайті для збору даних напряму — запис відбувається через сторонні сервіси (Telegram, Google Calendar).",
         ],
       },
       {
@@ -45,7 +45,7 @@ const content = {
       {
         heading: "3. Сторонні сервіси",
         body: [
-          "Для запису на консультацію ми можемо використовувати сторонні сервіси (наприклад, Telegram або Calendly). Ці сервіси мають власні політики конфіденційності, і ми рекомендуємо ознайомитися з ними окремо.",
+          "Для запису на консультацію ми можемо використовувати сторонні сервіси (наприклад, Telegram або Google Calendar). Ці сервіси мають власні політики конфіденційності, і ми рекомендуємо ознайомитися з ними окремо.",
         ],
       },
       {
@@ -89,8 +89,8 @@ const content = {
       {
         heading: "1. What data we collect",
         body: [
-          "When you book a consultation (via Telegram, Calendly, or another channel), we may receive your name and phone number.",
-          "We do not collect any other personal data through this website, and we do not use on-site forms to collect data directly — booking happens through third-party services (Telegram, Calendly).",
+          "When you book a consultation (via Telegram, Google Calendar, or another channel), we may receive your name and phone number.",
+          "We do not collect any other personal data through this website, and we do not use on-site forms to collect data directly — booking happens through third-party services (Telegram, Google Calendar).",
         ],
       },
       {
@@ -103,7 +103,7 @@ const content = {
       {
         heading: "3. Third-party services",
         body: [
-          "To manage bookings we may use third-party services (such as Telegram or Calendly). These services have their own privacy policies, which we recommend reviewing separately.",
+          "To manage bookings we may use third-party services (such as Telegram or Google Calendar). These services have their own privacy policies, which we recommend reviewing separately.",
         ],
       },
       {

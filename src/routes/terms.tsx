@@ -38,7 +38,7 @@ const content = {
       {
         heading: "2. Запис і скасування",
         body: [
-          "Запис на консультацію відбувається через контактні канали, вказані на сайті (Telegram, Calendly тощо).",
+          "Запис на консультацію відбувається через контактні канали, вказані на сайті (Telegram, Google Calendar тощо).",
           "Якщо вам потрібно перенести або скасувати заняття, будь ласка, повідомте якомога раніше — точні умови скасування узгоджуються індивідуально під час запису.",
         ],
       },
@@ -95,7 +95,7 @@ const content = {
       {
         heading: "2. Booking & cancellation",
         body: [
-          "Consultations are booked through the contact channels listed on the site (Telegram, Calendly, etc.).",
+          "Consultations are booked through the contact channels listed on the site (Telegram, Google Calendar, etc.).",
           "If you need to reschedule or cancel a session, please let us know as early as possible — specific cancellation terms are agreed individually at the time of booking.",
         ],
       },

@@ -5,6 +5,9 @@ import heroImage from "@/assets/hero-placeholder.svg";
 import aboutImage from "@/assets/about-placeholder.svg";
 import ctaImage from "@/assets/cta-placeholder.svg";
 
+const BOOKING_URL = "https://calendar.app.google/Nmaa9qdSNMWyobUH6";
+const TELEGRAM_URL = "https://t.me/AnastasiiaZakh";
+
 /* ----------------------------- HERO ----------------------------- */
 export function Hero() {
   const { t } = useI18n();
@@ -372,12 +375,24 @@ export function FinalCta() {
             <p className="mt-6 text-base md:text-lg text-primary-foreground/85 max-w-xl leading-relaxed">
               {t.finalCta.body}
             </p>
-            <a
-              href="mailto:hello@havkit.com"
-              className="mt-10 inline-flex items-center rounded-full bg-accent px-7 py-4 text-sm font-medium text-accent-foreground shadow-elevated transition hover:bg-accent/90"
-            >
-              {t.finalCta.button}
-            </a>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-full bg-accent px-7 py-4 text-sm font-medium text-accent-foreground shadow-elevated transition hover:bg-accent/90"
+              >
+                {t.finalCta.button}
+              </a>
+              <a
+                href={TELEGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-full border border-primary-foreground/30 px-7 py-4 text-sm font-medium text-primary-foreground transition hover:bg-primary-foreground/10"
+              >
+                {t.finalCta.telegramButton}
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -432,7 +447,7 @@ export function Footer() {
             </li>
             <li>
               <a
-                href="https://t.me"
+                href={TELEGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-primary"

@@ -57,6 +57,7 @@ export type Dict = {
     titleAccent: string;
     body: string;
     button: string;
+    telegramButton: string;
   };
   footer: {
     tagline: string;
@@ -247,6 +248,7 @@ export const translations: Record<Lang, Dict> = {
       titleAccent: "Йому потрібна людина, яка готова вчитися разом із ним.",
       body: "Якщо ви хочете краще розуміти свого собаку та побудувати з ним спокійні, довірливі стосунки — я із задоволенням допоможу.",
       button: "Записатися на консультацію",
+      telegramButton: "Написати в Telegram",
     },
     footer: {
       tagline: "Гуманне навчання. Довіра замість страху.",
@@ -438,6 +440,7 @@ export const translations: Record<Lang, Dict> = {
         "They need a human who is willing to learn together with them.",
       body: "If you want to understand your dog better and build a calm, trusting relationship — I’d love to help.",
       button: "Book a consultation",
+      telegramButton: "Message on Telegram",
     },
     footer: {
       tagline: "Humane training. Trust instead of fear.",
