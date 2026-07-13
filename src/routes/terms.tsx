@@ -6,7 +6,7 @@ import { Footer } from "@/components/havkit/Sections";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Service — HAVKIT" },
+      { title: "Terms of Service · HAVKIT" },
       {
         name: "description",
         content: "Terms of Service for HAVKIT dog training consultations.",
@@ -31,7 +31,7 @@ const content = {
       {
         heading: "1. Про послуги",
         body: [
-          "HAVKIT надає консультації та заняття з гуманного, науково обґрунтованого навчання собак — очно та онлайн.",
+          "HAVKIT надає консультації та заняття з гуманного, науково обґрунтованого навчання собак: очно та онлайн.",
           "Записуючись на консультацію, ви погоджуєтесь з цими Умовами.",
         ],
       },
@@ -39,7 +39,7 @@ const content = {
         heading: "2. Запис і скасування",
         body: [
           "Запис на консультацію відбувається через контактні канали, вказані на сайті (Telegram, Google Calendar тощо).",
-          "Якщо вам потрібно перенести або скасувати заняття, будь ласка, повідомте якомога раніше — точні умови скасування узгоджуються індивідуально під час запису.",
+          "Якщо вам потрібно перенести або скасувати заняття, будь ласка, повідомте якомога раніше. Точні умови скасування узгоджуються індивідуально під час запису.",
         ],
       },
       {
@@ -88,7 +88,7 @@ const content = {
       {
         heading: "1. About the service",
         body: [
-          "HAVKIT provides humane, evidence-based dog training consultations and sessions — in person and online.",
+          "HAVKIT provides humane, evidence-based dog training consultations and sessions: in person and online.",
           "By booking a consultation, you agree to these Terms.",
         ],
       },
@@ -96,7 +96,7 @@ const content = {
         heading: "2. Booking & cancellation",
         body: [
           "Consultations are booked through the contact channels listed on the site (Telegram, Google Calendar, etc.).",
-          "If you need to reschedule or cancel a session, please let us know as early as possible — specific cancellation terms are agreed individually at the time of booking.",
+          "If you need to reschedule or cancel a session, please let us know as early as possible. Specific cancellation terms are agreed individually at the time of booking.",
         ],
       },
       {

@@ -5,7 +5,7 @@ export function Logo() {
     <a
       href="#top"
       className="flex items-center gap-2.5"
-      aria-label="HAVKIT — home"
+      aria-label="HAVKIT home"
     >
       <img
         src={havkitIcon}

@@ -82,11 +82,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "theme-color", content: "#FAF6EF" },
-        { title: "HAVKIT — Гуманне навчання собак" },
+        { title: "HAVKIT · Гуманне навчання собак" },
         {
           name: "description",
           content:
-            "HAVKIT — приватний кінолог. Гуманне, науково обґрунтоване навчання. Довіра замість страху.",
+            "HAVKIT: приватний кінолог. Гуманне, науково обґрунтоване навчання. Довіра замість страху.",
         },
         { property: "og:site_name", content: "HAVKIT" },
         { property: "og:type", content: "website" },

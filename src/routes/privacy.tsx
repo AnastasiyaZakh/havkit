@@ -6,7 +6,7 @@ import { Footer } from "@/components/havkit/Sections";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — HAVKIT" },
+      { title: "Privacy Policy · HAVKIT" },
       {
         name: "description",
         content: "How HAVKIT collects, uses and protects your personal data.",
@@ -26,13 +26,13 @@ const content = {
     title: "Політика конфіденційності",
     updated: "Востаннє оновлено: 11 липня 2026",
     intro:
-      "Ця Політика конфіденційності описує, які дані HAVKIT (далі — «ми») збирає під час запису на консультацію чи заняття, як ми їх використовуємо та захищаємо.",
+      "Ця Політика конфіденційності описує, які дані HAVKIT (далі «ми») збирає під час запису на консультацію чи заняття, як ми їх використовуємо та захищаємо.",
     sections: [
       {
         heading: "1. Які дані ми збираємо",
         body: [
           "Коли ви записуєтесь на консультацію (через Telegram, Google Calendar або іншим способом), ми можемо отримати ваше ім’я та номер телефону.",
-          "Ми не збираємо жодних інших персональних даних через цей сайт і не використовуємо форми на сайті для збору даних напряму — запис відбувається через сторонні сервіси (Telegram, Google Calendar).",
+          "Ми не збираємо жодних інших персональних даних через цей сайт і не використовуємо форми на сайті для збору даних напряму: запис відбувається через сторонні сервіси (Telegram, Google Calendar).",
         ],
       },
       {
@@ -51,7 +51,7 @@ const content = {
       {
         heading: "4. Файли cookie та локальне сховище",
         body: [
-          "Сайт зберігає у локальному сховищі браузера (localStorage) лише одне значення — обрану мову інтерфейсу (українська/англійська). Це не є трекінговим cookie, дані нікуди не передаються.",
+          "Сайт зберігає у локальному сховищі браузера (localStorage) лише одне значення: обрану мову інтерфейсу (українська/англійська). Це не є трекінговим cookie, дані нікуди не передаються.",
           "Наразі сайт не використовує аналітичні чи рекламні cookie.",
         ],
       },
@@ -90,7 +90,7 @@ const content = {
         heading: "1. What data we collect",
         body: [
           "When you book a consultation (via Telegram, Google Calendar, or another channel), we may receive your name and phone number.",
-          "We do not collect any other personal data through this website, and we do not use on-site forms to collect data directly — booking happens through third-party services (Telegram, Google Calendar).",
+          "We do not collect any other personal data through this website, and we do not use on-site forms to collect data directly: booking happens through third-party services (Telegram, Google Calendar).",
         ],
       },
       {

@@ -18,14 +18,14 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "HAVKIT — Гуманне навчання собак · Kind, evidence-based dog training",
+          "HAVKIT · Гуманне навчання собак · Kind, evidence-based dog training",
       },
       {
         name: "description",
         content:
-          "HAVKIT — приватний кінолог. Гуманне, науково обґрунтоване навчання. Допомагаю людям і собакам краще розуміти одне одного.",
+          "HAVKIT: приватний кінолог. Гуманне, науково обґрунтоване навчання. Допомагаю людям і собакам краще розуміти одне одного.",
       },
-      { property: "og:title", content: "HAVKIT — Гуманне навчання собак" },
+      { property: "og:title", content: "HAVKIT · Гуманне навчання собак" },
       {
         property: "og:description",
         content:

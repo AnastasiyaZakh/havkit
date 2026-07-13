@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
-import heroImage from "@/assets/hero-placeholder.svg";
-import aboutImage from "@/assets/about-placeholder.svg";
-import ctaImage from "@/assets/cta-placeholder.svg";
 
 const BOOKING_URL = "https://calendar.app.google/Nmaa9qdSNMWyobUH6";
 const TELEGRAM_URL = "https://t.me/AnastasiiaZakh";
@@ -16,8 +13,8 @@ export function Hero() {
       id="top"
       className="relative pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden"
     >
-      <div className="container-narrow grid gap-14 lg:gap-16 lg:grid-cols-12 items-center">
-        <div className="lg:col-span-6 fade-up">
+      <div className="container-narrow">
+        <div className="max-w-2xl fade-up">
           <p className="text-xs tracking-[0.25em] uppercase text-secondary mb-6">
             {t.hero.eyebrow}
           </p>
@@ -66,22 +63,6 @@ export function Hero() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className="lg:col-span-6 fade-up">
-          <div className="relative">
-            <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-soft blur-2xl opacity-70" />
-            <div className="overflow-hidden rounded-3xl shadow-elevated">
-              <img
-                src={heroImage}
-                alt="HAVKIT — calm walk with a relaxed dog"
-                width={1600}
-                height={1200}
-                fetchPriority="high"
-                className="w-full h-[440px] md:h-[560px] object-cover"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -178,48 +159,34 @@ export function About() {
   const { t } = useI18n();
   return (
     <section id="about" className="py-24 md:py-32 bg-soft">
-      <div className="container-narrow grid gap-14 lg:grid-cols-12 items-start">
-        <div className="lg:col-span-5">
-          <div className="overflow-hidden rounded-3xl shadow-elevated">
-            <img
-              src={aboutImage}
-              alt="HAVKIT portrait"
-              width={1200}
-              height={1408}
-              loading="lazy"
-              className="w-full h-[520px] object-cover"
-            />
-          </div>
+      <div className="container-narrow max-w-2xl">
+        <p className="text-xs tracking-[0.25em] uppercase text-secondary">
+          {t.about.eyebrow}
+        </p>
+        <h2 className="mt-4 text-3xl md:text-4xl leading-tight text-foreground">
+          {t.about.title}
+        </h2>
+        <div className="mt-6 space-y-5 text-base leading-relaxed text-foreground/80">
+          {t.about.body.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
-        <div className="lg:col-span-7">
-          <p className="text-xs tracking-[0.25em] uppercase text-secondary">
-            {t.about.eyebrow}
-          </p>
-          <h2 className="mt-4 text-3xl md:text-4xl leading-tight text-foreground max-w-xl">
-            {t.about.title}
-          </h2>
-          <div className="mt-6 space-y-5 text-base leading-relaxed text-foreground/80 max-w-xl">
-            {t.about.body.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
 
-          <div className="mt-10 rounded-2xl bg-background p-8 shadow-soft">
-            <h3 className="text-sm tracking-[0.2em] uppercase text-secondary">
-              {t.about.educationTitle}
-            </h3>
-            <ul className="mt-5 space-y-3">
-              {t.about.education.map((e) => (
-                <li
-                  key={e}
-                  className="flex items-start gap-3 text-sm text-foreground/80"
-                >
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
-                  {e}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="mt-10 rounded-2xl bg-background p-8 shadow-soft">
+          <h3 className="text-sm tracking-[0.2em] uppercase text-secondary">
+            {t.about.educationTitle}
+          </h3>
+          <ul className="mt-5 space-y-3">
+            {t.about.education.map((e) => (
+              <li
+                key={e}
+                className="flex items-start gap-3 text-sm text-foreground/80"
+              >
+                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+                {e}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
@@ -231,7 +198,7 @@ export function Stories() {
   const { t } = useI18n();
   return (
     <section id="stories" className="py-24 md:py-32">
-      <div className="container-narrow">
+      <div className="container-narrow max-w-3xl">
         <p className="text-xs tracking-[0.25em] uppercase text-secondary text-center">
           {t.stories.eyebrow}
         </p>
@@ -239,45 +206,40 @@ export function Stories() {
           {t.stories.title}
         </h2>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-12">
-          <div className="lg:col-span-4 rounded-3xl bg-soft p-8 flex flex-col gap-6">
-            <div>
-              <div className="text-xs tracking-[0.2em] uppercase text-secondary">
-                {t.stories.problemLabel}
-              </div>
-              <p className="mt-2 text-foreground text-lg leading-snug">
-                {t.stories.problem}
-              </p>
-            </div>
-            <div>
-              <div className="text-xs tracking-[0.2em] uppercase text-secondary">
-                {t.stories.resultLabel}
-              </div>
-              <p className="mt-2 text-foreground text-lg leading-snug">
-                {t.stories.author.split(",")[0]}
-              </p>
-            </div>
+        <blockquote className="mt-14 rounded-3xl bg-card border border-border p-10 md:p-14 shadow-soft relative text-center">
+          <svg
+            aria-hidden
+            className="mx-auto text-accent/60"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M7 7h4v4H7c0 3 2 5 4 5v2c-4 0-6-3-6-7V7Zm9 0h4v4h-4c0 3 2 5 4 5v2c-4 0-6-3-6-7V7Z" />
+          </svg>
+          <div
+            className="mt-4 flex justify-center gap-1 text-accent"
+            aria-hidden
+          >
+            {Array.from({ length: 5 }).map((_, i) => (
+              <svg
+                key={i}
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.5 1.3 6.6L12 17l-5.9 3.4 1.3-6.6-4.9-4.5 6.6-.7L12 2.5z" />
+              </svg>
+            ))}
           </div>
-
-          <blockquote className="lg:col-span-8 rounded-3xl bg-card border border-border p-10 md:p-14 shadow-soft relative">
-            <svg
-              aria-hidden
-              className="absolute top-8 right-8 text-accent/60"
-              width="42"
-              height="42"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M7 7h4v4H7c0 3 2 5 4 5v2c-4 0-6-3-6-7V7Zm9 0h4v4h-4c0 3 2 5 4 5v2c-4 0-6-3-6-7V7Z" />
-            </svg>
-            <p className="text-lg md:text-xl leading-relaxed text-foreground/85">
-              {t.stories.quote}
-            </p>
-            <footer className="mt-8 text-sm text-secondary tracking-wide">
-              — {t.stories.author}
-            </footer>
-          </blockquote>
-        </div>
+          <p className="mt-6 text-lg md:text-xl leading-relaxed text-foreground/85">
+            {t.stories.quote}
+          </p>
+          <footer className="mt-8 text-sm text-secondary tracking-wide">
+            {t.stories.author}
+          </footer>
+        </blockquote>
       </div>
     </section>
   );
@@ -355,17 +317,7 @@ export function FinalCta() {
   return (
     <section id="contact" className="py-24 md:py-32">
       <div className="container-narrow">
-        <div className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-primary text-primary-foreground">
-          <img
-            src={ctaImage}
-            alt=""
-            aria-hidden
-            width={1600}
-            height={1008}
-            loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-luminosity"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-primary/70" />
+        <div className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-br from-primary via-primary to-secondary text-primary-foreground">
           <div className="relative px-6 py-20 md:px-16 md:py-28 max-w-3xl">
             <h2 className="text-3xl md:text-5xl leading-[1.15]">
               {t.finalCta.title}
@@ -435,16 +387,6 @@ export function Footer() {
             {t.footer.social}
           </div>
           <ul className="mt-4 space-y-2 text-sm text-foreground/80">
-            <li>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-primary"
-              >
-                Instagram
-              </a>
-            </li>
             <li>
               <a
                 href={TELEGRAM_URL}

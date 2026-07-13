@@ -45,9 +45,6 @@ export type Dict = {
   stories: {
     eyebrow: string;
     title: string;
-    problemLabel: string;
-    problem: string;
-    resultLabel: string;
     quote: string;
     author: string;
   };
@@ -97,17 +94,17 @@ export const translations: Record<Lang, Dict> = {
     help: {
       eyebrow: "Ситуації",
       title: "Чим я можу допомогти",
-      lede: "Це не список послуг. Це знайомі ситуації, у яких ви можете себе впізнати — і в яких я поруч.",
+      lede: "Це не список послуг, а знайомі ситуації, у яких ви можете себе впізнати і в яких я поруч.",
       items: [
         {
           icon: "🐶",
           title: "Підготовка до появи цуценяти",
-          body: "Допоможу створити м’який, зрозумілий старт спільного життя — щоб перші тижні стали фундаментом довіри, а не хаосу.",
+          body: "Допоможу створити м’який, зрозумілий старт спільного життя, щоб перші тижні стали фундаментом довіри, а не хаосу.",
         },
         {
           icon: "🌿",
           title: "Спокійні прогулянки без стресу",
-          body: "Допоможу зробити прогулянки спокійнішими та приємнішими для вас обох — без напруги в руці й у голові.",
+          body: "Допоможу зробити прогулянки спокійнішими та приємнішими для вас обох, без напруги в руці й у голові.",
         },
         {
           icon: "❤️",
@@ -117,17 +114,17 @@ export const translations: Record<Lang, Dict> = {
         {
           icon: "🏡",
           title: "Побутові труднощі",
-          body: "Пожування речей, стрибки на людей, самотність вдома — знайдемо м’які рішення, які працюють у вашому реальному житті.",
+          body: "Пожування речей, стрибки на людей, самотність вдома: знайдемо м’які рішення, які працюють у вашому реальному житті.",
         },
         {
           icon: "🎓",
           title: "Базове навчання",
-          body: "Прості й корисні навички для щоденного життя — щоб ви розуміли одне одного з півслова, а не з примусу.",
+          body: "Прості й корисні навички для щоденного життя, щоб ви розуміли одне одного з півслова, а не з примусу.",
         },
         {
           icon: "💻",
           title: "Онлайн консультації",
-          body: "Для тих, хто живе в іншому місті. Розберемо вашу ситуацію та складемо покроковий план — на зв’язку.",
+          body: "Для тих, хто живе в іншому місті. Розберемо вашу ситуацію та складемо покроковий план на зв’язку.",
         },
       ],
     },
@@ -139,7 +136,7 @@ export const translations: Record<Lang, Dict> = {
         {
           icon: "❤️",
           title: "Довіра важливіша за страх",
-          body: "Собака, який довіряє, вчиться швидше й глибше. Страх дає слухняність на мить — довіра дає зв’язок на роки.",
+          body: "Собака, який довіряє, вчиться швидше й глибше. Страх дає слухняність на мить, а довіра дає зв’язок на роки.",
         },
         {
           icon: "📚",
@@ -149,18 +146,18 @@ export const translations: Record<Lang, Dict> = {
         {
           icon: "🐾",
           title: "Кожен собака унікальний",
-          body: "Немає універсальних технік. Є ваш собака, ваш дім, ваш ритм — і план, який будується саме навколо цього.",
+          body: "Немає універсальних технік. Є ваш собака, ваш дім, ваш ритм, і план будується саме навколо цього.",
         },
         {
           icon: "🌿",
           title: "Навчання має покращувати життя",
-          body: "Якщо після заняття вам і собаці стає легше жити разом — ми на правильному шляху. Це головний критерій.",
+          body: "Якщо після заняття вам і собаці стає легше жити разом, ми на правильному шляху. Це головний критерій.",
         },
       ],
     },
     process: {
       eyebrow: "Як ми працюємо",
-      title: "Спокійний, зрозумілий шлях — разом",
+      title: "Спокійний, зрозумілий шлях разом",
       steps: [
         {
           n: "01",
@@ -170,7 +167,7 @@ export const translations: Record<Lang, Dict> = {
         {
           n: "02",
           title: "Зрозуміємо причину труднощів",
-          body: "Подивимося глибше за симптом — що саме стоїть за поведінкою.",
+          body: "Подивимося глибше за симптом: що саме стоїть за поведінкою.",
         },
         {
           n: "03",
@@ -185,17 +182,17 @@ export const translations: Record<Lang, Dict> = {
         {
           n: "05",
           title: "Радіємо вашим успіхам",
-          body: "Кожен маленький крок — це велика зміна для вас обох.",
+          body: "Кожен маленький крок означає велику зміну для вас обох.",
         },
       ],
     },
     about: {
       eyebrow: "Про мене",
-      title: "Мене звати HAVKIT — і я поруч, коли з собакою складно.",
+      title: "Мене звати Анастасія.",
       body: [
-        "Я закінчила навчання в Одеській школі службового собаківництва. Проте для мене навчання не закінчилося отриманням диплома.",
+        "Я закінчила навчання в Одеській школі службового собаківництва.",
         "Я постійно проходжу українські та американські курси, читаю сучасну літературу з кінології та стежу за новими дослідженнями. Мені важливо працювати лише з методами, ефективність яких підтверджена сучасною наукою.",
-        "Я вірю, що хороше навчання — це не про контроль. Це про довіру. Про взаєморозуміння. І про комфортне життя людини та собаки разом.",
+        "Я вірю, що хороше навчання не про контроль, а навпаки про довіру, взаєморозуміння та комфортне життя людини та собаки разом.",
       ],
       educationTitle: "Освіта та практика",
       education: [
@@ -208,13 +205,10 @@ export const translations: Record<Lang, Dict> = {
       ],
     },
     stories: {
-      eyebrow: "Історія",
-      title: "Крістіна + мальтіпу Мія",
-      problemLabel: "Ситуація",
-      problem: "Реактивність на інших собак та людей на прогулянках",
-      resultLabel: "Результат",
+      eyebrow: "Відгуки",
+      title: "Що кажуть клієнти",
       quote:
-        "Нам сподобалося абсолютно все! 🥹 Дуже сподобалася ти як людина, твоє ставлення до Мії та твій підхід до роботи. Видно, що ти дуже любиш свою справу й справді хочеш допомогти. Після наших занять ми можемо набагато спокійніше гуляти майже без постійного гавкання, і для мене це просто величезний результат. Команди, яких ти нас навчила, дуже корисні, і найголовніше — вони дійсно працюють. Нам стало набагато легше розуміти Мію та правильно поводитися в різних ситуаціях. Ми безмежно задоволені результатом і дуже вдячні тобі за терпіння, підтримку та всі поради. Дуже раді, що обрали саме тебе. 💞",
+        "Нам сподобалося абсолютно все! 🥹 Дуже сподобалася ти як людина, твоє ставлення до Мії та твій підхід до роботи. Видно, що ти дуже любиш свою справу й справді хочеш допомогти. Після наших занять ми можемо набагато спокійніше гуляти майже без постійного гавкання, і для мене це просто величезний результат. Команди, яких ти нас навчила, дуже корисні, і найголовніше, вони дійсно працюють. Нам стало набагато легше розуміти Мію та правильно поводитися в різних ситуаціях. Ми безмежно задоволені результатом і дуже вдячні тобі за терпіння, підтримку та всі поради. Дуже раді, що обрали саме тебе. 💞",
       author: "Крістіна, власниця Мії",
     },
     faq: {
@@ -223,11 +217,11 @@ export const translations: Record<Lang, Dict> = {
       items: [
         {
           q: "Чи використовуєте ви покарання?",
-          a: "Ні. У моїй роботі немає місця для страху, болю чи залякування. Я працюю через довіру, зрозумілі правила та підкріплення бажаної поведінки — саме такий підхід підтверджений сучасною наукою як найбільш ефективний і безпечний для психіки собаки.",
+          a: "Ні. У моїй роботі немає місця для страху, болю чи залякування. Я працюю через довіру, зрозумілі правила та підкріплення бажаної поведінки. Саме такий підхід підтверджений сучасною наукою як найбільш ефективний і безпечний для психіки собаки.",
         },
         {
           q: "З якого віку можна починати?",
-          a: "Починати можна з перших днів удома. Для цуценят це м’яка адаптація, знайомство зі світом і формування здорових звичок. Для дорослих собак ніколи не пізно — я працювала з собаками різного віку та історії.",
+          a: "Починати можна з перших днів удома. Для цуценят це м’яка адаптація, знайомство зі світом і формування здорових звичок. Для дорослих собак ніколи не пізно: я працювала з собаками різного віку та історії.",
         },
         {
           q: "Скільки потрібно занять?",
@@ -235,7 +229,7 @@ export const translations: Record<Lang, Dict> = {
         },
         {
           q: "Чи працюєте онлайн?",
-          a: "Так. Онлайн-формат добре підходить для розбору ситуацій, побудови плану та супроводу між очними заняттями. Ми зідзвонюємось, ви показуєте вашу ситуацію — і разом рухаємось далі.",
+          a: "Так. Онлайн-формат добре підходить для розбору ситуацій, побудови плану та супроводу між очними заняттями. Ми зідзвонюємось, ви показуєте вашу ситуацію, і разом рухаємось далі.",
         },
         {
           q: "Чи можна звернутися лише за консультацією?",
@@ -244,9 +238,9 @@ export const translations: Record<Lang, Dict> = {
       ],
     },
     finalCta: {
-      title: "Вашому собаці не потрібен ідеальний власник.",
-      titleAccent: "Йому потрібна людина, яка готова вчитися разом із ним.",
-      body: "Якщо ви хочете краще розуміти свого собаку та побудувати з ним спокійні, довірливі стосунки — я із задоволенням допоможу.",
+      title: "Готові почати?",
+      titleAccent: "Напишіть мені, і ми разом розберемось, із чого почати.",
+      body: "Розкажіть коротко про себе й свого собаку, я підкажу перші кроки.",
       button: "Записатися на консультацію",
       telegramButton: "Написати в Telegram",
     },
@@ -287,17 +281,17 @@ export const translations: Record<Lang, Dict> = {
     help: {
       eyebrow: "Situations",
       title: "How I can help",
-      lede: "Not a list of services — a set of familiar moments you might recognise, and where I can walk beside you.",
+      lede: "Not a list of services, but a set of familiar moments you might recognise, and where I can walk beside you.",
       items: [
         {
           icon: "🐶",
           title: "Preparing for a puppy",
-          body: "A soft, clear start to life together — so the first weeks become the foundation of trust, not chaos.",
+          body: "A soft, clear start to life together, so the first weeks become the foundation of trust, not chaos.",
         },
         {
           icon: "🌿",
           title: "Calm walks without stress",
-          body: "Walks that feel lighter for both of you — without tension in the leash or in your head.",
+          body: "Walks that feel lighter for both of you, without tension in the leash or in your head.",
         },
         {
           icon: "❤️",
@@ -307,17 +301,17 @@ export const translations: Record<Lang, Dict> = {
         {
           icon: "🏡",
           title: "Everyday difficulties",
-          body: "Chewing, jumping, being alone at home — gentle solutions that actually fit your real life.",
+          body: "Chewing, jumping, being alone at home: gentle solutions that actually fit your real life.",
         },
         {
           icon: "🎓",
           title: "Foundation skills",
-          body: "Simple, useful skills for daily life — so you understand each other easily, without pressure.",
+          body: "Simple, useful skills for daily life, so you understand each other easily, without pressure.",
         },
         {
           icon: "💻",
           title: "Online consultations",
-          body: "For those who live in another city. We look at your situation and build a step-by-step plan — together, remotely.",
+          body: "For those who live in another city. We look at your situation and build a step-by-step plan together, remotely.",
         },
       ],
     },
@@ -339,7 +333,7 @@ export const translations: Record<Lang, Dict> = {
         {
           icon: "🐾",
           title: "Every dog is unique",
-          body: "There are no universal techniques. There is your dog, your home, your rhythm — and a plan built around that.",
+          body: "There are no universal techniques. There is your dog, your home, your rhythm, and a plan built around that.",
         },
         {
           icon: "🌿",
@@ -350,7 +344,7 @@ export const translations: Record<Lang, Dict> = {
     },
     process: {
       eyebrow: "How we work together",
-      title: "A calm, clear path — together",
+      title: "A calm, clear path together",
       steps: [
         {
           n: "01",
@@ -381,12 +375,11 @@ export const translations: Record<Lang, Dict> = {
     },
     about: {
       eyebrow: "About me",
-      title:
-        "I’m HAVKIT — the person beside you when life with a dog feels hard.",
+      title: "My name is Anastasia.",
       body: [
-        "I completed my training at the Odesa School of Service Dog Handling. But for me, learning didn’t end with a diploma.",
+        "I completed my training at the Odesa School of Service Dog Handling.",
         "I continuously take Ukrainian and American courses, read modern cynology literature and follow new research. It matters to me to work only with methods whose effectiveness is confirmed by current science.",
-        "I believe good training isn’t about control. It’s about trust. About mutual understanding. And about a comfortable life for a person and a dog together.",
+        "I believe good training isn’t about control. Instead, it’s about trust, mutual understanding, and a comfortable life for a person and a dog together.",
       ],
       educationTitle: "Education & practice",
       education: [
@@ -399,13 +392,10 @@ export const translations: Record<Lang, Dict> = {
       ],
     },
     stories: {
-      eyebrow: "A story",
-      title: "Kristina + Mia the maltipoo",
-      problemLabel: "Situation",
-      problem: "Reactivity toward other dogs and people on walks",
-      resultLabel: "Result",
+      eyebrow: "Reviews",
+      title: "What clients say",
       quote:
-        "We loved absolutely everything! 🥹 We loved you as a person, your attitude toward Mia and your approach to your work. You can see that you truly love what you do and really want to help. After our sessions we can walk much more calmly, almost without constant barking, and for me this is a huge result. The cues you taught us are so useful — and most importantly, they actually work. It has become much easier to understand Mia and to know how to act in different situations. We are endlessly happy with the result and so grateful for your patience, support and every piece of advice. So glad we chose you. 💞",
+        "We loved absolutely everything! 🥹 We loved you as a person, your attitude toward Mia and your approach to your work. You can see that you truly love what you do and really want to help. After our sessions we can walk much more calmly, almost without constant barking, and for me this is a huge result. The cues you taught us are so useful, and most importantly, they actually work. It has become much easier to understand Mia and to know how to act in different situations. We are endlessly happy with the result and so grateful for your patience, support and every piece of advice. So glad we chose you. 💞",
       author: "Kristina, Mia’s human",
     },
     faq: {
@@ -414,11 +404,11 @@ export const translations: Record<Lang, Dict> = {
       items: [
         {
           q: "Do you use punishment?",
-          a: "No. There is no place in my work for fear, pain or intimidation. I work through trust, clear rules and reinforcement of desired behaviour — the approach confirmed by modern science as the most effective and safest for a dog’s wellbeing.",
+          a: "No. There is no place in my work for fear, pain or intimidation. I work through trust, clear rules and reinforcement of desired behaviour, the approach confirmed by modern science as the most effective and safest for a dog’s wellbeing.",
         },
         {
           q: "At what age can we start?",
-          a: "You can start from the first days at home. For puppies it’s a gentle adaptation and building healthy habits. For adult dogs it’s never too late — I’ve worked with dogs of all ages and histories.",
+          a: "You can start from the first days at home. For puppies it’s a gentle adaptation and building healthy habits. For adult dogs it’s never too late: I’ve worked with dogs of all ages and histories.",
         },
         {
           q: "How many sessions are needed?",
@@ -426,7 +416,7 @@ export const translations: Record<Lang, Dict> = {
         },
         {
           q: "Do you work online?",
-          a: "Yes. The online format works well for reviewing situations, building a plan and supporting you between in-person sessions. We meet on a call, you show me your context — and we move forward together.",
+          a: "Yes. The online format works well for reviewing situations, building a plan and supporting you between in-person sessions. We meet on a call, you show me your context, and we move forward together.",
         },
         {
           q: "Can I just book a single consultation?",
@@ -435,10 +425,9 @@ export const translations: Record<Lang, Dict> = {
       ],
     },
     finalCta: {
-      title: "Your dog doesn’t need a perfect owner.",
-      titleAccent:
-        "They need a human who is willing to learn together with them.",
-      body: "If you want to understand your dog better and build a calm, trusting relationship — I’d love to help.",
+      title: "Ready to start?",
+      titleAccent: "Message me, and we'll figure out the first step together.",
+      body: "Tell me a little about you and your dog, and I'll suggest where to begin.",
       button: "Book a consultation",
       telegramButton: "Message on Telegram",
     },
