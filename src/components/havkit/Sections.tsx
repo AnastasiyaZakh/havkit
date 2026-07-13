@@ -358,29 +358,12 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-border/60 py-16">
-      <div className="container-narrow grid gap-10 md:grid-cols-4">
+      <div className="container-narrow grid gap-10 md:grid-cols-3">
         <div className="md:col-span-2">
           <div className="text-lg tracking-[0.18em] font-medium">HAVKIT</div>
           <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
             {t.footer.tagline}
           </p>
-        </div>
-        <div>
-          <div className="text-xs tracking-[0.2em] uppercase text-secondary">
-            {t.footer.contact}
-          </div>
-          <ul className="mt-4 space-y-2 text-sm text-foreground/80">
-            <li>
-              <a href="mailto:hello@havkit.com" className="hover:text-primary">
-                hello@havkit.com
-              </a>
-            </li>
-            <li>
-              <a href="tel:+380000000000" className="hover:text-primary">
-                +380 00 000 00 00
-              </a>
-            </li>
-          </ul>
         </div>
         <div>
           <div className="text-xs tracking-[0.2em] uppercase text-secondary">

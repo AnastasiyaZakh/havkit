@@ -58,7 +58,6 @@ export type Dict = {
   };
   footer: {
     tagline: string;
-    contact: string;
     social: string;
     lang: string;
     rights: string;
@@ -246,7 +245,6 @@ export const translations: Record<Lang, Dict> = {
     },
     footer: {
       tagline: "Гуманне навчання. Довіра замість страху.",
-      contact: "Контакти",
       social: "Соцмережі",
       lang: "Мова",
       rights: "Усі права захищені.",
@@ -433,7 +431,6 @@ export const translations: Record<Lang, Dict> = {
     },
     footer: {
       tagline: "Humane training. Trust instead of fear.",
-      contact: "Contact",
       social: "Social",
       lang: "Language",
       rights: "All rights reserved.",
