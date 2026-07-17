@@ -3,6 +3,17 @@ import { I18nProvider, useI18n } from "@/lib/i18n";
 import { Nav } from "@/components/havkit/Nav";
 import { Footer } from "@/components/havkit/Sections";
 
+import premiereFish from "@/assets/treats/premiere-fish.jpg";
+import realNatureLamb from "@/assets/treats/real-nature-lamb.jpg";
+import escapureSalmon from "@/assets/treats/escapure-salmon.jpg";
+import realNatureDuck from "@/assets/treats/real-nature-duck.jpg";
+import premiereBonies from "@/assets/treats/premiere-bonies.jpg";
+import britEndurance from "@/assets/treats/brit-endurance-lamb-banana.jpg";
+import britAntistress from "@/assets/treats/brit-antistress-shrimp-hemp.jpg";
+import savoryImmunity from "@/assets/treats/savory-immunity-duck-rosehips.jpg";
+import carnilove from "@/assets/treats/carnilove-quail.jpg";
+import britLight from "@/assets/treats/brit-light-rabbit-papaya.jpg";
+
 const TELEGRAM_URL = "https://t.me/AnastasiiaZakh";
 
 export const Route = createFileRoute("/treats")({
@@ -31,52 +42,56 @@ const content = {
     lede: "Якісне заохочення важливе не менше, ніж сам метод навчання. Ось смаколики, які я особисто використовую й радимо на заняттях.",
     items: [
       {
-        icon: "🐟",
-        title: "Риба",
-        body: "Кубики зі 100% риби. М’який, гіпоалергенний варіант для чутливих собак.",
+        img: premiereFish,
+        brand: "PREMIERE. Fish",
+        body: "Кубики з лососем і тріскою.",
       },
       {
-        icon: "🐑",
-        title: "Ягня",
-        body: "В’ялена ягнятина без злаків і барвників. Підходить для щоденного заохочення.",
+        img: realNatureLamb,
+        brand: "Real Nature Wilderness · Pure Lamb",
+        body: "100% ягня, м’яко висушене.",
       },
       {
-        icon: "🐟",
-        title: "Лосось",
-        body: "В’ялений лосось, джерело Омега-3 для шерсті та шкіри.",
+        img: escapureSalmon,
+        brand: "Escapure · Lachs",
+        body: "98% м’яса, лосось.",
       },
       {
-        icon: "🦆",
-        title: "Качка",
-        body: "90% качки, м’яка текстура: зручно для інтенсивних тренувань.",
+        img: realNatureDuck,
+        brand: "Real Nature Wilderness · Pure Duck",
+        body: "90% качки, для щоденних тренувань.",
       },
       {
-        icon: "🦴",
-        title: "Кісточки з яловичиною",
-        body: "Жувальні смаколики з начинкою. Добре тримають увагу на прогулянці.",
+        img: premiereBonies,
+        brand: "PREMIERE. Bonies",
+        body: "Кісточки з начинкою з яловичини.",
       },
       {
-        icon: "🍌",
-        title: "Ягня з бананом",
-        body: "Функціональний снек для активних собак, збагачений L-карнітином.",
+        img: britEndurance,
+        brand: "Brit Endurance",
+        body: "Ягня з бананом, для активних собак.",
       },
       {
-        icon: "🦐",
-        title: "Креветки з коноплею",
-        body: "Заспокійлива формула на трав’яній основі. Гарний вибір для тривожних собак.",
+        img: britAntistress,
+        brand: "Brit Antistress",
+        body: "Креветки з коноплею, заспокійлива формула.",
       },
       {
-        icon: "🐦",
-        title: "Перепілка з орегано",
-        body: "Без зерна та картоплі, збагачені трав’яними екстрактами.",
+        img: savoryImmunity,
+        brand: "Savory Immunity Support",
+        body: "Качка з шипшиною, для імунітету.",
       },
       {
-        icon: "🥭",
-        title: "Кролик з папаєю",
-        body: "Легка формула для собак, які стежать за вагою.",
+        img: carnilove,
+        brand: "Carnilove Soft Quail",
+        body: "Перепілка з орегано, без зерна.",
+      },
+      {
+        img: britLight,
+        brand: "Brit Light",
+        body: "Кролик з папаєю, легка формула.",
       },
     ],
-    note: "Фото власних смаколиків з’являться тут незабаром.",
     ctaTitle: "Хочете дізнатися більше?",
     ctaBody:
       "Напишіть мені в Telegram, якщо маєте питання про смаколики чи їх наявність.",
@@ -88,52 +103,56 @@ const content = {
     lede: "Quality reinforcement matters just as much as the training method itself. Here are the treats I personally use and recommend during sessions.",
     items: [
       {
-        icon: "🐟",
-        title: "Fish",
-        body: "100% fish cubes. A soft, hypoallergenic option for sensitive dogs.",
+        img: premiereFish,
+        brand: "PREMIERE. Fish",
+        body: "Cubes with salmon and cod.",
       },
       {
-        icon: "🐑",
-        title: "Lamb",
-        body: "Air-dried lamb, no grain or dyes. Great for everyday reinforcement.",
+        img: realNatureLamb,
+        brand: "Real Nature Wilderness · Pure Lamb",
+        body: "100% lamb, gently air-dried.",
       },
       {
-        icon: "🐟",
-        title: "Salmon",
-        body: "Air-dried salmon, a source of Omega-3 for skin and coat.",
+        img: escapureSalmon,
+        brand: "Escapure · Lachs",
+        body: "98% meat, salmon.",
       },
       {
-        icon: "🦆",
-        title: "Duck",
-        body: "90% duck, soft texture: easy to use during intensive training.",
+        img: realNatureDuck,
+        brand: "Real Nature Wilderness · Pure Duck",
+        body: "90% duck, for daily training.",
       },
       {
-        icon: "🦴",
-        title: "Beef bones",
-        body: "Filled chew treats. Good for keeping focus on walks.",
+        img: premiereBonies,
+        brand: "PREMIERE. Bonies",
+        body: "Beef-filled bone-shaped chews.",
       },
       {
-        icon: "🍌",
-        title: "Lamb with banana",
-        body: "A functional snack for active dogs, enriched with L-carnitine.",
+        img: britEndurance,
+        brand: "Brit Endurance",
+        body: "Lamb with banana, for active dogs.",
       },
       {
-        icon: "🦐",
-        title: "Shrimp with hemp",
-        body: "A calming, herb-based blend. A good choice for anxious dogs.",
+        img: britAntistress,
+        brand: "Brit Antistress",
+        body: "Shrimp with hemp, a calming blend.",
       },
       {
-        icon: "🐦",
-        title: "Quail with oregano",
-        body: "Grain- and potato-free, enriched with herbal extracts.",
+        img: savoryImmunity,
+        brand: "Savory Immunity Support",
+        body: "Duck with rosehips, for immunity.",
       },
       {
-        icon: "🥭",
-        title: "Rabbit with papaya",
-        body: "A light formula for dogs watching their weight.",
+        img: carnilove,
+        brand: "Carnilove Soft Quail",
+        body: "Quail with oregano, grain-free.",
+      },
+      {
+        img: britLight,
+        brand: "Brit Light",
+        body: "Rabbit with papaya, a light formula.",
       },
     ],
-    note: "Photos of the actual treats will be added here soon.",
     ctaTitle: "Want to know more?",
     ctaBody:
       "Message me on Telegram if you have questions about the treats or availability.",
@@ -163,21 +182,26 @@ function TreatsPage() {
         <div className="container-narrow mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {c.items.map((it) => (
             <article
-              key={it.title}
-              className="rounded-3xl border border-border bg-card p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-elevated"
+              key={it.brand}
+              className="overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition hover:-translate-y-1 hover:shadow-elevated"
             >
-              <div className="text-3xl">{it.icon}</div>
-              <h3 className="mt-6 text-xl text-foreground">{it.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {it.body}
-              </p>
+              <div className="aspect-square overflow-hidden bg-soft">
+                <img
+                  src={it.img}
+                  alt={it.brand}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-base text-foreground">{it.brand}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {it.body}
+                </p>
+              </div>
             </article>
           ))}
         </div>
-
-        <p className="container-narrow mt-10 text-center text-sm text-muted-foreground">
-          {c.note}
-        </p>
 
         <div className="container-narrow mt-16">
           <div className="rounded-[2rem] md:rounded-[2.5rem] bg-gradient-to-br from-primary via-primary to-secondary text-primary-foreground px-6 py-14 md:px-16 md:py-20 text-center">
