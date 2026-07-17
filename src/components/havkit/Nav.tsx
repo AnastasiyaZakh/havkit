@@ -15,14 +15,14 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links: { href?: string; to?: string; label: string }[] = [
-    { href: "/#help", label: t.nav.help },
-    { href: "/#approach", label: t.nav.approach },
-    { href: "/#about", label: t.nav.about },
-    { href: "/#stories", label: t.nav.stories },
+  const links: { hash?: string; to?: string; label: string }[] = [
+    { hash: "help", label: t.nav.help },
+    { hash: "approach", label: t.nav.approach },
+    { hash: "about", label: t.nav.about },
+    { hash: "stories", label: t.nav.stories },
     { to: "/treats", label: t.nav.treats },
-    { href: "/#faq", label: t.nav.faq },
-    { href: "/#contact", label: t.nav.contact },
+    { hash: "faq", label: t.nav.faq },
+    { hash: "contact", label: t.nav.contact },
   ];
 
   return (
@@ -37,25 +37,16 @@ export function Nav() {
         <Logo />
 
         <nav className="hidden lg:flex items-center gap-8">
-          {links.map((l) =>
-            l.to ? (
-              <Link
-                key={l.to}
-                to={l.to}
-                className="text-sm text-foreground/70 hover:text-foreground transition-colors"
-              >
-                {l.label}
-              </Link>
-            ) : (
-              <a
-                key={l.href}
-                href={l.href}
-                className="text-sm text-foreground/70 hover:text-foreground transition-colors"
-              >
-                {l.label}
-              </a>
-            ),
-          )}
+          {links.map((l) => (
+            <Link
+              key={l.to ?? l.hash}
+              to={l.to ?? "/"}
+              hash={l.hash}
+              className="text-sm text-foreground/70 hover:text-foreground transition-colors"
+            >
+              {l.label}
+            </Link>
+          ))}
         </nav>
 
         <div className="flex items-center gap-2 md:gap-3">
@@ -84,12 +75,13 @@ export function Nav() {
             </button>
           </div>
 
-          <a
-            href="/#contact"
+          <Link
+            to="/"
+            hash="contact"
             className="hidden md:inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-soft transition hover:bg-primary/90"
           >
             {t.nav.cta}
-          </a>
+          </Link>
 
           <button
             className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground"
@@ -125,27 +117,17 @@ export function Nav() {
       {open && (
         <div className="lg:hidden border-t border-border bg-background">
           <div className="container-narrow py-6 flex flex-col gap-4">
-            {links.map((l) =>
-              l.to ? (
-                <Link
-                  key={l.to}
-                  to={l.to}
-                  onClick={() => setOpen(false)}
-                  className="text-base text-foreground/80"
-                >
-                  {l.label}
-                </Link>
-              ) : (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="text-base text-foreground/80"
-                >
-                  {l.label}
-                </a>
-              ),
-            )}
+            {links.map((l) => (
+              <Link
+                key={l.to ?? l.hash}
+                to={l.to ?? "/"}
+                hash={l.hash}
+                onClick={() => setOpen(false)}
+                className="text-base text-foreground/80"
+              >
+                {l.label}
+              </Link>
+            ))}
             <div className="flex items-center gap-3 pt-2">
               <button
                 onClick={() => setLang("uk")}
@@ -168,13 +150,14 @@ export function Nav() {
                 English
               </button>
             </div>
-            <a
-              href="/#contact"
+            <Link
+              to="/"
+              hash="contact"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground"
             >
               {t.nav.cta}
-            </a>
+            </Link>
           </div>
         </div>
       )}

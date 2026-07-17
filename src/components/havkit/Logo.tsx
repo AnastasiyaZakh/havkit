@@ -1,9 +1,11 @@
+import { Link } from "@tanstack/react-router";
 import havkitIcon from "@/assets/brand/havkit-icon.png";
 
 export function Logo() {
   return (
-    <a
-      href="#top"
+    <Link
+      to="/"
+      hash="top"
       className="flex items-center gap-2.5"
       aria-label="HAVKIT home"
     >
@@ -17,6 +19,6 @@ export function Logo() {
       <span className="text-lg tracking-[0.18em] font-medium text-foreground">
         HAVKIT
       </span>
-    </a>
+    </Link>
   );
 }
