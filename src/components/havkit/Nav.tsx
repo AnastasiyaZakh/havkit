@@ -16,13 +16,13 @@ export function Nav() {
   }, []);
 
   const links: { href?: string; to?: string; label: string }[] = [
-    { href: "#help", label: t.nav.help },
-    { href: "#approach", label: t.nav.approach },
-    { href: "#about", label: t.nav.about },
-    { href: "#stories", label: t.nav.stories },
+    { href: "/#help", label: t.nav.help },
+    { href: "/#approach", label: t.nav.approach },
+    { href: "/#about", label: t.nav.about },
+    { href: "/#stories", label: t.nav.stories },
     { to: "/treats", label: t.nav.treats },
-    { href: "#faq", label: t.nav.faq },
-    { href: "#contact", label: t.nav.contact },
+    { href: "/#faq", label: t.nav.faq },
+    { href: "/#contact", label: t.nav.contact },
   ];
 
   return (
@@ -85,7 +85,7 @@ export function Nav() {
           </div>
 
           <a
-            href="#contact"
+            href="/#contact"
             className="hidden md:inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-soft transition hover:bg-primary/90"
           >
             {t.nav.cta}
@@ -169,7 +169,7 @@ export function Nav() {
               </button>
             </div>
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground"
             >
