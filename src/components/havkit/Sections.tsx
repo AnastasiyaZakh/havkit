@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
+import aboutPortrait from "@/assets/about/anastasiia-portrait.jpg";
 
 const BOOKING_URL = "https://calendar.app.google/Nmaa9qdSNMWyobUH6";
 const TELEGRAM_URL = "https://t.me/AnastasiiaZakh";
@@ -159,34 +160,48 @@ export function About() {
   const { t } = useI18n();
   return (
     <section id="about" className="py-24 md:py-32 bg-soft">
-      <div className="container-narrow max-w-2xl">
-        <p className="text-xs tracking-[0.25em] uppercase text-secondary">
-          {t.about.eyebrow}
-        </p>
-        <h2 className="mt-4 text-3xl md:text-4xl leading-tight text-foreground">
-          {t.about.title}
-        </h2>
-        <div className="mt-6 space-y-5 text-base leading-relaxed text-foreground/80">
-          {t.about.body.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
+      <div className="container-narrow grid gap-14 lg:grid-cols-12 items-start">
+        <div className="lg:col-span-5">
+          <div className="overflow-hidden rounded-3xl shadow-elevated">
+            <img
+              src={aboutPortrait}
+              alt="Анастасія з собакою"
+              width={1100}
+              height={1955}
+              loading="lazy"
+              className="w-full h-[520px] object-cover object-top"
+            />
+          </div>
         </div>
-
-        <div className="mt-10 rounded-2xl bg-background p-8 shadow-soft">
-          <h3 className="text-sm tracking-[0.2em] uppercase text-secondary">
-            {t.about.educationTitle}
-          </h3>
-          <ul className="mt-5 space-y-3">
-            {t.about.education.map((e) => (
-              <li
-                key={e}
-                className="flex items-start gap-3 text-sm text-foreground/80"
-              >
-                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
-                {e}
-              </li>
+        <div className="lg:col-span-7">
+          <p className="text-xs tracking-[0.25em] uppercase text-secondary">
+            {t.about.eyebrow}
+          </p>
+          <h2 className="mt-4 text-3xl md:text-4xl leading-tight text-foreground max-w-xl">
+            {t.about.title}
+          </h2>
+          <div className="mt-6 space-y-5 text-base leading-relaxed text-foreground/80 max-w-xl">
+            {t.about.body.map((p, i) => (
+              <p key={i}>{p}</p>
             ))}
-          </ul>
+          </div>
+
+          <div className="mt-10 rounded-2xl bg-background p-8 shadow-soft">
+            <h3 className="text-sm tracking-[0.2em] uppercase text-secondary">
+              {t.about.educationTitle}
+            </h3>
+            <ul className="mt-5 space-y-3">
+              {t.about.education.map((e) => (
+                <li
+                  key={e}
+                  className="flex items-start gap-3 text-sm text-foreground/80"
+                >
+                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+                  {e}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
