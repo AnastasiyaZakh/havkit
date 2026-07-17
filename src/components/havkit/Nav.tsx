@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
 import { useI18n } from "@/lib/i18n";
 
@@ -14,11 +15,12 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links = [
+  const links: { href?: string; to?: string; label: string }[] = [
     { href: "#help", label: t.nav.help },
     { href: "#approach", label: t.nav.approach },
     { href: "#about", label: t.nav.about },
     { href: "#stories", label: t.nav.stories },
+    { to: "/treats", label: t.nav.treats },
     { href: "#faq", label: t.nav.faq },
     { href: "#contact", label: t.nav.contact },
   ];
@@ -35,15 +37,25 @@ export function Nav() {
         <Logo />
 
         <nav className="hidden lg:flex items-center gap-8">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm text-foreground/70 hover:text-foreground transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
+          {links.map((l) =>
+            l.to ? (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="text-sm text-foreground/70 hover:text-foreground transition-colors"
+              >
+                {l.label}
+              </Link>
+            ) : (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm text-foreground/70 hover:text-foreground transition-colors"
+              >
+                {l.label}
+              </a>
+            ),
+          )}
         </nav>
 
         <div className="flex items-center gap-2 md:gap-3">
@@ -113,16 +125,27 @@ export function Nav() {
       {open && (
         <div className="lg:hidden border-t border-border bg-background">
           <div className="container-narrow py-6 flex flex-col gap-4">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="text-base text-foreground/80"
-              >
-                {l.label}
-              </a>
-            ))}
+            {links.map((l) =>
+              l.to ? (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  onClick={() => setOpen(false)}
+                  className="text-base text-foreground/80"
+                >
+                  {l.label}
+                </Link>
+              ) : (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="text-base text-foreground/80"
+                >
+                  {l.label}
+                </a>
+              ),
+            )}
             <div className="flex items-center gap-3 pt-2">
               <button
                 onClick={() => setLang("uk")}

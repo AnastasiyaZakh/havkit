@@ -6,6 +6,7 @@ export type Dict = {
     approach: string;
     about: string;
     stories: string;
+    treats: string;
     faq: string;
     contact: string;
     cta: string;
@@ -73,6 +74,7 @@ export const translations: Record<Lang, Dict> = {
       approach: "Мій підхід",
       about: "Про мене",
       stories: "Відгуки",
+      treats: "Смаколики",
       faq: "FAQ",
       contact: "Контакти",
       cta: "Записатися на консультацію",
@@ -258,7 +260,8 @@ export const translations: Record<Lang, Dict> = {
       help: "How I can help",
       approach: "My approach",
       about: "About me",
-      stories: "Stories",
+      stories: "Reviews",
+      treats: "Treats",
       faq: "FAQ",
       contact: "Contact",
       cta: "Book a consultation",

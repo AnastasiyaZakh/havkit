@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TreatsRouteImport } from './routes/treats'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TreatsRoute = TreatsRouteImport.update({
+  id: '/treats',
+  path: '/treats',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -33,34 +39,45 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/treats': typeof TreatsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/treats': typeof TreatsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/treats': typeof TreatsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/privacy' | '/terms'
+  fullPaths: '/' | '/privacy' | '/terms' | '/treats'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/privacy' | '/terms'
-  id: '__root__' | '/' | '/privacy' | '/terms'
+  to: '/' | '/privacy' | '/terms' | '/treats'
+  id: '__root__' | '/' | '/privacy' | '/terms' | '/treats'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
+  TreatsRoute: typeof TreatsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/treats': {
+      id: '/treats'
+      path: '/treats'
+      fullPath: '/treats'
+      preLoaderRoute: typeof TreatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
+  TreatsRoute: TreatsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
