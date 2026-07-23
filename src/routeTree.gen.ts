@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TreatsRouteImport } from './routes/treats'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as PrepRouteImport } from './routes/prep'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TreatsRoute = TreatsRouteImport.update({
@@ -29,6 +30,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrepRoute = PrepRouteImport.update({
+  id: '/prep',
+  path: '/prep',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,12 +43,14 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/prep': typeof PrepRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/treats': typeof TreatsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/prep': typeof PrepRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/treats': typeof TreatsRoute
@@ -50,20 +58,22 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/prep': typeof PrepRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/treats': typeof TreatsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/privacy' | '/terms' | '/treats'
+  fullPaths: '/' | '/prep' | '/privacy' | '/terms' | '/treats'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/privacy' | '/terms' | '/treats'
-  id: '__root__' | '/' | '/privacy' | '/terms' | '/treats'
+  to: '/' | '/prep' | '/privacy' | '/terms' | '/treats'
+  id: '__root__' | '/' | '/prep' | '/privacy' | '/terms' | '/treats'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PrepRoute: typeof PrepRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
   TreatsRoute: typeof TreatsRoute
@@ -92,6 +102,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/prep': {
+      id: '/prep'
+      path: '/prep'
+      fullPath: '/prep'
+      preLoaderRoute: typeof PrepRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -104,6 +121,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PrepRoute: PrepRoute,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
   TreatsRoute: TreatsRoute,

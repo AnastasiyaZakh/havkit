@@ -21,6 +21,7 @@ export function Nav() {
     { hash: "about", label: t.nav.about },
     { hash: "stories", label: t.nav.stories },
     { to: "/treats", label: t.nav.treats },
+    { to: "/prep", label: t.nav.prep },
     { hash: "faq", label: t.nav.faq },
     { hash: "contact", label: t.nav.contact },
   ];
