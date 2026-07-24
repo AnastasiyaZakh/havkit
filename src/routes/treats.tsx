@@ -93,8 +93,7 @@ const content = {
       },
     ],
     ctaTitle: "Хочете дізнатися більше?",
-    ctaBody:
-      "Напишіть мені в Telegram, якщо маєте питання про смаколики чи їх наявність.",
+    ctaBody: "Напишіть мені в Telegram, якщо маєте питання про смаколики.",
     ctaButton: "Написати в Telegram",
   },
   en: {
@@ -154,8 +153,7 @@ const content = {
       },
     ],
     ctaTitle: "Want to know more?",
-    ctaBody:
-      "Message me on Telegram if you have questions about the treats or availability.",
+    ctaBody: "Message me on Telegram if you have questions about the treats.",
     ctaButton: "Message on Telegram",
   },
 };
