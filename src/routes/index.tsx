@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { I18nProvider } from "@/lib/i18n";
+import { withBase } from "@/lib/base-path";
 import { Nav } from "@/components/havkit/Nav";
 import {
   Hero,
@@ -32,9 +33,9 @@ export const Route = createFileRoute("/")({
           "Навчання без страху. Довіра замість тиску. Індивідуальний план для вас і вашого собаки.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: withBase("/") },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: withBase("/") }],
     scripts: [
       {
         type: "application/ld+json",
@@ -46,7 +47,7 @@ export const Route = createFileRoute("/")({
             "Гуманне, науково обґрунтоване навчання собак. Приватний кінолог.",
           areaServed: "UA",
           email: "hello@havkit.com",
-          url: "/",
+          url: withBase("/"),
         }),
       },
     ],

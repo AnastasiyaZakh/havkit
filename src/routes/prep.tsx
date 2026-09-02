@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { I18nProvider, useI18n } from "@/lib/i18n";
 import { Nav } from "@/components/havkit/Nav";
 import { Footer } from "@/components/havkit/Sections";
+import { withBase } from "@/lib/base-path";
 
 export const Route = createFileRoute("/prep")({
   head: () => ({
@@ -13,7 +14,7 @@ export const Route = createFileRoute("/prep")({
           "Як підготуватися і чого очікувати від першого заняття з дресирування собаки.",
       },
     ],
-    links: [{ rel: "canonical", href: "/prep" }],
+    links: [{ rel: "canonical", href: withBase("/prep") }],
   }),
   component: () => (
     <I18nProvider>

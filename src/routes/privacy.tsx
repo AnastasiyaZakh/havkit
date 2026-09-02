@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { I18nProvider, useI18n } from "@/lib/i18n";
 import { Nav } from "@/components/havkit/Nav";
 import { Footer } from "@/components/havkit/Sections";
+import { withBase } from "@/lib/base-path";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -12,7 +13,7 @@ export const Route = createFileRoute("/privacy")({
         content: "How HAVKIT collects, uses and protects your personal data.",
       },
     ],
-    links: [{ rel: "canonical", href: "/privacy" }],
+    links: [{ rel: "canonical", href: withBase("/privacy") }],
   }),
   component: () => (
     <I18nProvider>
