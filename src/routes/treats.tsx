@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { I18nProvider, useI18n } from "@/lib/i18n";
 import { Nav } from "@/components/havkit/Nav";
 import { Footer } from "@/components/havkit/Sections";
+import { withBase } from "@/lib/base-path";
 
 import premiereFish from "@/assets/treats/premiere-fish.jpg";
 import realNatureLamb from "@/assets/treats/real-nature-lamb.jpg";
@@ -27,7 +28,7 @@ export const Route = createFileRoute("/treats")({
           "Смаколики, які HAVKIT використовує й рекомендує на заняттях із дресирування.",
       },
     ],
-    links: [{ rel: "canonical", href: "/treats" }],
+    links: [{ rel: "canonical", href: withBase("/treats") }],
   }),
   component: () => (
     <I18nProvider>

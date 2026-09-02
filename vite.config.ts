@@ -11,8 +11,11 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    router: { basepath: "/havkit" },
+    prerender: { enabled: true, crawlLinks: true },
   },
   vite: {
+    base: "/havkit/",
     // Outside the Lovable sandbox the default "::" (IPv6 any) host isn't
     // supported by every container network stack.
     server: { host: "127.0.0.1", port: 8080 },
