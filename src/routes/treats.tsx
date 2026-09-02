@@ -4,7 +4,6 @@ import { Nav } from "@/components/havkit/Nav";
 import { Footer } from "@/components/havkit/Sections";
 import { withBase } from "@/lib/base-path";
 
-import premiereFish from "@/assets/treats/premiere-fish.jpg";
 import realNatureLamb from "@/assets/treats/real-nature-lamb.jpg";
 import escapureSalmon from "@/assets/treats/escapure-salmon.jpg";
 import realNatureDuck from "@/assets/treats/real-nature-duck.jpg";
@@ -42,11 +41,6 @@ const content = {
     title: "Смаколики, які я рекомендую",
     lede: "Якісне заохочення важливе не менше, ніж сам метод навчання. Ось смаколики, які я особисто використовую й радимо на заняттях.",
     items: [
-      {
-        img: premiereFish,
-        brand: "PREMIERE. Fish",
-        body: "Кубики з лососем і тріскою.",
-      },
       {
         img: realNatureLamb,
         brand: "Real Nature Wilderness · Pure Lamb",
@@ -102,11 +96,6 @@ const content = {
     title: "Treats I recommend",
     lede: "Quality reinforcement matters just as much as the training method itself. Here are the treats I personally use and recommend during sessions.",
     items: [
-      {
-        img: premiereFish,
-        brand: "PREMIERE. Fish",
-        body: "Cubes with salmon and cod.",
-      },
       {
         img: realNatureLamb,
         brand: "Real Nature Wilderness · Pure Lamb",
