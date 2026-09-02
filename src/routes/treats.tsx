@@ -8,7 +8,6 @@ import premiereFish from "@/assets/treats/premiere-fish.jpg";
 import realNatureLamb from "@/assets/treats/real-nature-lamb.jpg";
 import escapureSalmon from "@/assets/treats/escapure-salmon.jpg";
 import realNatureDuck from "@/assets/treats/real-nature-duck.jpg";
-import premiereBonies from "@/assets/treats/premiere-bonies.jpg";
 import britEndurance from "@/assets/treats/brit-endurance-lamb-banana.jpg";
 import britAntistress from "@/assets/treats/brit-antistress-shrimp-hemp.jpg";
 import savoryImmunity from "@/assets/treats/savory-immunity-duck-rosehips.jpg";
@@ -62,11 +61,6 @@ const content = {
         img: realNatureDuck,
         brand: "Real Nature Wilderness · Pure Duck",
         body: "90% качки, для щоденних тренувань.",
-      },
-      {
-        img: premiereBonies,
-        brand: "PREMIERE. Bonies",
-        body: "Кісточки з начинкою з яловичини.",
       },
       {
         img: britEndurance,
@@ -127,11 +121,6 @@ const content = {
         img: realNatureDuck,
         brand: "Real Nature Wilderness · Pure Duck",
         body: "90% duck, for daily training.",
-      },
-      {
-        img: premiereBonies,
-        brand: "PREMIERE. Bonies",
-        body: "Beef-filled bone-shaped chews.",
       },
       {
         img: britEndurance,
