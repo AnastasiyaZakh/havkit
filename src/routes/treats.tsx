@@ -13,6 +13,7 @@ import britAntistress from "@/assets/treats/brit-antistress-shrimp-hemp.jpg";
 import savoryImmunity from "@/assets/treats/savory-immunity-duck-rosehips.jpg";
 import carnilove from "@/assets/treats/carnilove-quail.jpg";
 import britLight from "@/assets/treats/brit-light-rabbit-papaya.jpg";
+import grancarnoMeatChunks from "@/assets/treats/grancarno-meat-chunks-lamb.jpg";
 
 const TELEGRAM_URL = "https://t.me/AnastasiiaZakh";
 
@@ -91,6 +92,11 @@ const content = {
         brand: "Brit Light",
         body: "Кролик з папаєю, легка формула.",
       },
+      {
+        img: grancarnoMeatChunks,
+        brand: "Animonda GranCarno · Meat Chunks",
+        body: "97% ягняти, шматочки м’яса, ніжно висушені.",
+      },
     ],
     ctaTitle: "Хочете дізнатися більше?",
     ctaBody: "Напишіть мені в Telegram, якщо маєте питання про смаколики.",
@@ -150,6 +156,11 @@ const content = {
         img: britLight,
         brand: "Brit Light",
         body: "Rabbit with papaya, a light formula.",
+      },
+      {
+        img: grancarnoMeatChunks,
+        brand: "Animonda GranCarno · Meat Chunks",
+        body: "97% lamb, gently air-dried meat chunks.",
       },
     ],
     ctaTitle: "Want to know more?",
